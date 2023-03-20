@@ -1,0 +1,25 @@
+---
+const { size = "medium", variant = "primary" } = Astro.props;
+---
+
+<button data-size={size} data-variant={variant}><slot /></button>
+
+<style>
+  button {
+    border: none;
+    background: hotpink;
+    color: #fefefe;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  [data-size="small"] {
+    padding: 0.5rem;
+  }
+  [data-size="large"] {
+    padding: 1.5rem;
+  }
+  [data-variant="secondary"] {
+    background: #fefefe;
+    color: hotpink;
+  }
+</style>
